@@ -31,6 +31,7 @@ torify curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-L
 Или получаем id чата, указав @channelName
 ```
 torify curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/sendMessage?chat_id=@channelName&text=Test
+```
 
 ## chmod и cron
 
