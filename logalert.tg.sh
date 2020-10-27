@@ -9,8 +9,8 @@ ERRORFILE="/tmp/logs.txt"
 ERROR="$(less $ERRORFILE)"
 
 # Хотел сделать так, но не получилось
-#CODEGREEN="$(torsocks curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ALLOK")"
-#CODERED="$(torsocks curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ERROR")"
+#CODEGREEN="$(curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ALLOK")"
+#CODERED="$(curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ERROR")"
 
 
 echo "ATTENTION: Errors are found in /var/log/messages." >> $ERRORFILE
@@ -25,9 +25,9 @@ prev_count=0
 count=$(grep -i "`date --date='yesterday' '+%b %e'`" /var/log/messages | egrep -wi 'warning|error|critical' | wc -l)
 if [ "$prev_count" = "$count" ] ;
 then
-torsocks curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ALLOK"
+curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ALLOK"
 elif [ "$prev_count" -lt "$count" ] ;
 then
-torsocks curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ERROR"
+curl -s -X POST "$URL" -d chat_id="$CHAT_ID" -d text="$ERROR"
 
 fi
