@@ -14,11 +14,11 @@ sudo apt install mailutils postfix
 Создаем через https://t.me/botfather бота и получаем токен.
 Находим через поиск нашего бота и "скармливаем" команду /start, после чего получаем chat_id диалога
 ```
-torify curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/getUpdates
+curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/getUpdates
 ```
 Или получаем id чата, указав @channelName
 ```
-torify curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/sendMessage?chat_id=@channelName&text=Test
+curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/sendMessage?chat_id=@channelName&text=Test
 ```
 
 ## chmod и cron
