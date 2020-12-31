@@ -26,7 +26,7 @@ curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/
 В настройках сервера открываем вкладку "Интеграция", нажимаем "новый вебхук" указываем название вебхука и  выбираем канал, куда будут приходить запросы. 
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"username": "Тест", "content": "Привет!"}' https://discordapp.com/api/webhooks/203019812404264973/rptBmYgoehu70kw2rItSlhRqKi7kMJh1bM2KCUUD2vR6grZckvtdl62h4xR7XWUS5463
+curl -H "Content-Type: application/json" -X POST -d '{"username": "Тест", "content": "Привет!"}' https://discordapp.com/api/webhooks/203019812404264973/rptBmYgoehu70kw2rItSlhRqKi7dcMJh1bM2KCUUD2vR6grZckvtdl62h4xR7XWUS5463
 ```
 
 
@@ -37,6 +37,7 @@ curl -H "Content-Type: application/json" -X POST -d '{"username": "Тест", "c
 ```
 chmod +x logalert.tg.sh
 chmod +x logalert.mail.sh
+chmod +x logalert.discord.sh  
 ```
 
 Добавляем скрипт в cron:
@@ -44,6 +45,7 @@ chmod +x logalert.mail.sh
 crontab -e
 0 7 * * * /bin/bash logalert.mail.sh
 0 7 * * * /bin/bash logalert.tg.sh
+0 7 * * * /bin/bash logalert.discord.sh 
 ```
 
 
@@ -61,6 +63,6 @@ crontab -e
 
 [ X ] Добавить скрипт для Telegram  
 [ X ] Добавить скрипт для Discord   
-[   ] Доделать скрипт для Telegram  
-[   ] Добавить проверку на зависимости и наличие в crontab.  
+[ - ] Доделать скрипт для Telegram  
+[ - ] Добавить проверку на зависимости и наличие в crontab.  
 
