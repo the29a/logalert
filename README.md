@@ -21,6 +21,16 @@ curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/
 curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/sendMessage?chat_id=@channelName&text=Test
 ```
 
+## Discord:
+
+В настройках сервера открываем вкладку "Интеграция", нажимаем "новый вебхук" указываем название вебхука и  выбираем канал, куда будут приходить запросы. 
+
+```
+curl -H "Content-Type: application/json" -X POST -d '{"username": "Тест", "content": "Привет!"}' https://discordapp.com/api/webhooks/203019812404264973/rptBmYgoehu70kw2rItSlhRqKi7kMJh1bM2KCUUD2vR6grZckvtdl62h4xR7XWUS5463
+```
+
+
+
 ## chmod и cron
 
 Делаем скрипт исполняемым:
@@ -37,8 +47,18 @@ crontab -e
 ```
 
 
+
+Дополнительные ссылки:
+
+discord-webhooks-guide [EN]
+
+[discord-webhooks-gude [RU]](https://darkpro1337.github.io/discord-webhooks/)
+
+[Использование Webhooks Discord](https://support.discord.com/hc/ru/articles/228383668-%D0%98%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-Webhooks)
+
 ## TODO:  
 
 [ X ] Добавить скрипт для Telegram  
 [   ] Доделать скрипт для Telegram  
 [   ] Добавить проверку на зависимости и наличие в crontab.  
+
