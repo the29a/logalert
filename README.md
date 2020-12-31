@@ -48,9 +48,9 @@ crontab -e
 
 
 
-Дополнительные ссылки:
+## Дополнительные ссылки:
 
-discord-webhooks-guide [EN]
+[discord-webhooks-guide](https://birdie0.github.io/discord-webhooks-guide/)[EN]
 
 [discord-webhooks-gude [RU]](https://darkpro1337.github.io/discord-webhooks/)
 
