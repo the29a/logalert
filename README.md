@@ -14,11 +14,11 @@ sudo apt install mailutils postfix
 Создаем через https://t.me/botfather бота и получаем токен.
 Находим через поиск нашего бота и "скармливаем" команду /start, после чего получаем chat_id диалога
 ```
-curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/getUpdates
+curl https://api.telegram.org/bot<api-token>/getUpdates
 ```
 Или получаем id чата, указав @channelName
 ```
-curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/sendMessage?chat_id=@channelName&text=Test
+curl https://api.telegram.org/bot<api-token>/sendMessage?chat_id=@channelName&text=Test
 ```
 
 ## Discord:
@@ -26,7 +26,7 @@ curl https://api.telegram.org/bot876875234:BBSG4GZcUHkFhAJDaDsc8hH6u-pO-LQALPQ0/
 В настройках сервера открываем вкладку "Интеграция", нажимаем "новый вебхук" указываем название вебхука и  выбираем канал, куда будут приходить запросы. 
 
 ```
-curl -H "Content-Type: application/json" -X POST -d '{"username": "Тест", "content": "Привет!"}' https://discordapp.com/api/webhooks/203019812404264973/rptBmYgoehu70kw2rItSlhRqKi7dcMJh1bM2KCUUD2vR6grZckvtdl62h4xR7XWUS5463
+curl -H "Content-Type: application/json" -X POST -d '{"username": "Тест", "content": "Привет!"}' https://discord.com/api/webhooks/<some-digits>/<some-letters>
 ```
 
 
